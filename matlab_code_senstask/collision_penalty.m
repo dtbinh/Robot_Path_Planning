@@ -1,0 +1,19 @@
+function colld=collision_penalty(Xpath,i,j,Ncs,k)
+if Xpath{1}(1,1)==-1
+    colld=0;
+    return
+end
+
+colld=0;
+for ss=1:1:Ncs
+    P=norm(Xpath{ss}(k,1:2)-[i,j]);
+    if P==0
+       colld=1e10;
+       break
+    end
+    colld=colld+1/P;
+end
+
+
+
+end
