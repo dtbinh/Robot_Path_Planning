@@ -1,0 +1,16 @@
+clear 
+% clc
+i=1; 
+P1=[10,-1;-1,2];
+m1=[5;3];
+ang=0:0.3*pi/180:2*pi;
+% [X,W]=GH_points(m1,P1,7);
+% [X,W]=UT_sigmapoints(m1,P1,2);
+[X,W]=conjugate_dir_gausspts(m1,P1);
+for phi=ang
+D(i)=expt_KL_sens(phi,m1,P1,X,W);
+i=i+1;
+end
+plot(ang*180/pi,D)
+[a,b]=max(D);
+[ang(b),atan2(m1(2),m1(1))]*180/pi
