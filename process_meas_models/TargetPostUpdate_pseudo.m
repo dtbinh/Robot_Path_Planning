@@ -1,4 +1,4 @@
-function [TargetPos,XKF,PKF,XKU,PKU,flag]=TargetPostUpdate(ntars,curk,type,SensorModel,TargetPos,Time,further)
+function [TargetPos,XKF,PKF,XKU,PKU,flag]=TargetPostUpdate_pseudo(ntars,curk,type,SensorModel,TargetPos,Time,further)
 % update the target at the same time curk
 % update according to the tasks that have been assigned
 % so if type=='true' have to generate a measurement and then update

@@ -1,4 +1,4 @@
-function [TargetPos,XK1,PK1]=TargetPriorProp(ntars,curk,futk,TargetPos,Time,further)
+function [TargetPos,XK1,PK1]=TargetPriorProp_pseudo(ntars,curk,futk,TargetPos,Time,further)
 %from curk to futk, assuming curk is the initial condition
 % can update all or some or 1
 % M=GetCellOptions(further,opt)
