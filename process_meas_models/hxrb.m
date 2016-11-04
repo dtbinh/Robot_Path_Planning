@@ -20,7 +20,7 @@ end
    y=[r;th];
    tp=[0;1];% 0 =='r' , 1 == 'th'
 if r>Rmax || abs(diff)>alpha
-G=NaN;
+G=-1;
 else
 G=1; 
 end
